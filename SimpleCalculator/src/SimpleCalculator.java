@@ -7,6 +7,7 @@ public class SimpleCalculator {
         String str = scanner.nextLine();
         if (isNumber(str)) {
             convertNumber(str);
+            System.out.println(str);
         } else {
             System.out.println("Not a number!");
         }
@@ -14,7 +15,7 @@ public class SimpleCalculator {
 
     public static boolean isNumber (String str) {
         try {
-            float floatNumber = Float.parseFloat(str);
+            Float.parseFloat(str);
             return true;
         } catch (Exception e) {
             return false;
@@ -22,7 +23,6 @@ public class SimpleCalculator {
     }
 
     public static float convertNumber(String str) {
-        float floatNumber = Float.parseFloat(str);
-        return floatNumber;
+        return Float.parseFloat(str);
     }
 }
