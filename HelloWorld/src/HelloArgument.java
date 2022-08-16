@@ -7,11 +7,12 @@ public class HelloArgument {
         sayHello();
     }
 
-    public static String getUserName (){
+    public static String getUserName() {
         Scanner scanner = new Scanner(System.in);
-        return  scanner.nextLine();
+        return scanner.nextLine();
     }
-    public static String getHelloMessage (String name) {
+
+    public static String getHelloMessage(String name) {
         if (name.equals("")) {
             return "Hello, World!";
         } else {
@@ -19,7 +20,7 @@ public class HelloArgument {
         }
     }
 
-    public static void sayHello (){
+    public static void sayHello() {
         System.out.println(getHelloMessage(getUserName()));
     }
 }
