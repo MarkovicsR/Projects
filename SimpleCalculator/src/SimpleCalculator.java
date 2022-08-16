@@ -2,14 +2,10 @@ import java.util.Scanner;
 
 public class SimpleCalculator {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a number!");
-        String str = scanner.nextLine();
-        if (isNumber(str)) {
-            convertNumber(str);
-            System.out.println(str);
-        } else {
-            System.out.println("Not a number!");
+        do {
+            askForANumber();
+        } while (forceValidInput(isNumber())){
+
         }
     }
 
@@ -22,7 +18,34 @@ public class SimpleCalculator {
         }
     }
 
+    public static boolean forceValidInput (boolean isItANumber) {
+        if (isItANumber) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+
     public static float convertNumber(String str) {
         return Float.parseFloat(str);
+    }
+
+    public static Float askForANumber (boolean forceValidInput) {
+        System.out.println("Enter a number!");
+        input();
+        if (isNumber(input())) {
+            float inputNUmber = convertNumber(input());
+            System.out.println(input());
+            return inputNUmber;
+        } else {
+            System.out.println("Not a number!");
+            return null;
+        }
+    }
+
+    public static String input () {
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+        return str;
     }
 }
