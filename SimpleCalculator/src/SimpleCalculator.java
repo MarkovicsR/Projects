@@ -3,10 +3,8 @@ import java.util.Scanner;
 public class SimpleCalculator {
     public static void main(String[] args) {
         do {
-            askForANumber();
-        } while (forceValidInput(isNumber())){
-
-        }
+            askForANumber(forceValidInput(true));
+        } while (forceValidInput(false));
     }
 
     public static boolean isNumber (String str) {
@@ -31,15 +29,18 @@ public class SimpleCalculator {
     }
 
     public static Float askForANumber (boolean forceValidInput) {
-        System.out.println("Enter a number!");
+        /*System.out.println("Enter a number!");
         input();
-        if (isNumber(input())) {
+        if (forceValidInput) {
             float inputNUmber = convertNumber(input());
             System.out.println(input());
             return inputNUmber;
         } else {
             System.out.println("Not a number!");
             return null;
+        }*/
+        while (true) {
+
         }
     }
 
