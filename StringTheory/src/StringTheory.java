@@ -60,7 +60,7 @@ public class StringTheory {
         }
         return isPangram;
     }
-    
+
 
     public static char[] convertToCharArray (String stringToConvert) {
         String input = stringToConvert.toLowerCase().replace(" ", "");
